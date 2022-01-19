@@ -1,19 +1,13 @@
 console.log("Welcome to the main module")
-
+//imports
 import {createPlan} from "./plan.js"
+import {plantSeeds} from "./tractor.js";
+
 
 const yearlyPlan= createPlan();
 
-console.log(yearlyPlan);
+//console.log(yearlyPlan);
 
 //test code
-import { createAsparagus } from "./seeds/asparagus.js"
-
-const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
-
-import { usePlants } from "./field.js"
-const tillField = usePlants()
-console.log(tillField)
-
-const seed= {type:'asparagus', height:145, output:4}
+const sowField= plantSeeds(yearlyPlan);
+console.log(sowField);

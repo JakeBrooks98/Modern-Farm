@@ -1,9 +1,11 @@
 const fieldProduce = [];
 
-addPlant = (seed) => {
-    seed.push(fieldProduce)
+export const addPlant = (seed) => {
+    fieldProduce.push(seed)
+    return fieldProduce
 }
 
 export const usePlants = () => {
-    return fieldProduce
+    let usePlantsCopy = fieldProduce.map(fieldProduce => ({...fieldProduce}))
+    return usePlantsCopy
 }
