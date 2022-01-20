@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgba(245, 245, 96, 0.877);
+    background-color: rgba(223, 223, 85, 0.877);
 
 }
 
