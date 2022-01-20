@@ -8,33 +8,34 @@ import { createWheat } from "./seeds/wheat.js"
 
 export const plantSeeds = (parentPlan) => {
     for (const childPlan of parentPlan) {
-    for (const plan of childPlan) {
-        if (plan === 'Aparagus') {
-            const plantAsparagus=createAsparagus();
-            addPlant(plantAsparagus);
-        }
-        else if (plan === 'corn') {
-           const plantCorn= createCorn();
-           addPlant(plantCorn)
-        }
-        else if (plan === 'Potato') {
-            const plantPotato=createPotato();
-            addPlant(plantPotato);
-        }
-        else if (plan === 'Soybean') {
-            const plantSoybean=createSoybean();
-            addPlant(plantSoybean);
-        }
-        else if (plan === 'Sunflower') {
-            const plantSunflower=createSunflower();
-            addPlant(plantSunflower);
-        }
-        else if (plan === 'Wheat') {
-            const plantWheat=createWheat();
-            addPlant(plantWheat);
+        for (const plan of childPlan) {
+            if (plan === 'Asparagus') {
+                const plantAsparagus = createAsparagus();
+                addPlant(plantAsparagus);
+            }
+            else if (plan === 'Corn') {
+                const plantCorn = createCorn();
+                addPlant(plantCorn[0])
+                addPlant(plantCorn[1])
+            }
+            else if (plan === 'Potato') {
+                const plantPotato = createPotato();
+                addPlant(plantPotato);
+            }
+            else if (plan === 'Soybean') {
+                const plantSoybean = createSoybean();
+                addPlant(plantSoybean);
+            }
+            else if (plan === 'Sunflower') {
+                const plantSunflower = createSunflower();
+                addPlant(plantSunflower);
+            }
+            else if (plan === 'Wheat') {
+                const plantWheat = createWheat();
+                addPlant(plantWheat);
+            }
         }
     }
-}
     return usePlants()
 
 }
